@@ -56,7 +56,7 @@ mkdir "${work_folder}"
 
 curl -L "https://drive.usercontent.google.com/download?id=${fileId}&export=download&confirm=y" -o "${work_folder}/localization_ua.zip"
 
-unzip -j "${work_folder}/localization_ua.zip" -d "${work_folder}"
+tar -xf"${work_folder}/localization_ua.zip" -C "${work_folder}" --strip-components=1
 
 cd "${work_folder}"
 # Тут використовується файл info, де вказані інструкції, що і куди треба скопіювати
@@ -78,13 +78,15 @@ grep -E 'file_[0-9]+|link_[0-9]+' info | while IFS= read -r line; do
             else
               cp -r "$file" "$link"
             fi
-           printf "Скопійовано $file до $link\n"
+             printf "${BLUE}Скопійовано ${PURPLE}$file${NC}${BLUE} до ${YEL}$link\n"
         else
-            printf "${RED}Помилка: %s або %s  не існує${NC}\n" "$file" "$link"
+            printf "${RED}Помилка: ${PURPLE}%s${NC}${BLUE} або ${YEL}%s  не існує${NC}\n" "$file" "$link"
+            printf "${RED}Робочий каталог ${YEL}${work_folder}${NC} ${RED}та файли не були видалені${NC}\n"
+
         fi
     fi
 done
 
 printf "${BLUE}Встановлення закінчено!\nВидалення завантажених файлів локалізації та робочого каталогу ${YEL}${work_folder}${NC}${BLUE}...\nУспіх!\n"
 rm -r "${work_folder}"
-printf "${RED}-♡--♡--♡-${BLUE}Приємної гри! ${YEL}≽^•⩊•^≼ ${RED}-♡--♡--♡-${NC}\n"
+printf "\n\n\n${RED}-♡--♡--♡-${BLUE}Приємної гри! ${YEL}≽^•⩊•^≼ ${RED}-♡--♡--♡-${NC}\n\n\n"
