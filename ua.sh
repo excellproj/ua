@@ -56,7 +56,7 @@ mkdir "${work_folder}"
 
 curl -L "https://drive.usercontent.google.com/download?id=${fileId}&export=download&confirm=y" -o "${work_folder}/localization_ua.zip"
 
-tar -xf"${work_folder}/localization_ua.zip" -C "${work_folder}" --strip-components=1
+tar -xf "${work_folder}/localization_ua.zip" -C "${work_folder}" --strip-components=1
 
 cd "${work_folder}"
 # Тут використовується файл info, де вказані інструкції, що і куди треба скопіювати
