@@ -59,7 +59,7 @@ curl -L "https://drive.usercontent.google.com/download?id=${fileId}&export=downl
 unzip -j "${work_folder}/localization_ua.zip" -d "${work_folder}"
 
 cd "${work_folder}"
-
+# Тут використовується файл info, де вказані інструкції, що і куди треба скопіювати
 grep -E 'file_[0-9]+|link_[0-9]+' info | while IFS= read -r line; do
     if [[ $line == file_* ]]; then
         file="${line#*=}"
