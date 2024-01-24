@@ -71,11 +71,16 @@ grep -E 'file_[0-9]+|link_[0-9]+' info | while IFS= read -r line; do
             link="$HOME${link:1}"
         fi
 
-        if [[ -n $file && -n $link && -e $file && -d $link ]]; then
-            cp "$file" "$link"
-            printf "Скопійовано $file до $link\n"
+        if [[ -n "$file" && -n "$link" && -e "$file" && -d "$link" ]]; then
+            #Перевіряємо чи надходить тека з файлами, чи імʼя файлу
+            if [[  $file == */ ]]; then
+              cp -r "$file"* "$link"
+            else
+              cp -r "$file" "$link"
+            fi
+           printf "Скопійовано $file до $link\n"
         else
-            printf "${RED}Помилка: $file або $link не існує${NC}\n"
+            printf "${RED}Помилка: %s або %s  не існує${NC}\n" "$file" "$link"
         fi
     fi
 done
