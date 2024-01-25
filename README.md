@@ -34,6 +34,6 @@ link_3=~/Library/Application Support/CampoSanto/Firewatch/Localization
 
 ### ***Список ігор/Games list***  
 ```
-* firewatch => Firewatch
-* aer => AER Memories of Old
+firewatch => Firewatch
+aer => AER Memories of Old
 ```
