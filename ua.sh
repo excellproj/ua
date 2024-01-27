@@ -16,9 +16,9 @@ work_folder="$HOME/Downloads/LOC_UA240891" # Створення робочої �
 #gameDes - повна назва гри
 #gameIds - короткий варіант назви гри, так званий ID гри, який використовують для вибору гри при підчас встановлення
 #fileIds - посилання на завантаження файлів з Google Drive
-gameDes=("AER Memories of Old" "Firewatch" "Evoland Legendary Edition")
-gameIds=("aer" "firewatch" "evoland_le")
-fileIds=("1-PJVIg09M8s2uXxSDZZUQYRHoG-7s_UQ" "16syl-lfrfxh2vUqOLu5Gbjj0gjCOjz9Y" "1SNLzafwJM7IS9sR_dIQL3LFLhdM3X47s")
+gameDes=("AER Memories of Old" "Firewatch" "Evoland Legendary Edition" "Hollow Knight")
+gameIds=("aer" "firewatch" "evoland_le" "hollow_knight")
+fileIds=("1-PJVIg09M8s2uXxSDZZUQYRHoG-7s_UQ" "16syl-lfrfxh2vUqOLu5Gbjj0gjCOjz9Y" "1SNLzafwJM7IS9sR_dIQL3LFLhdM3X47s" "1xEFWMe8YwzxmjXUNoKzJmlRnfvSRTW75")
 
 printf "${YEL}Вітаю! Цей скрипт допоможе встановити українську локалізацію${BLUE}\nБудь ласка упевніться, що Ви зробили перший запуск гри.\n\
 Введіть ID гри (вказано в інструкції) або list, щоб побачити список доступних ID => Назва гри: \n"
