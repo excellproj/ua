@@ -36,4 +36,5 @@ link_3=~/Library/Application Support/CampoSanto/Firewatch/Localization
 ```
 firewatch => Firewatch
 aer => AER Memories of Old
+evoland_le => Evoland Legendary Edition
 ```
