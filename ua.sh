@@ -93,7 +93,6 @@ fi
 if [[ -f "info" ]]; then # Зчитуємо значення delink_* з файлу info
     delink="$(grep -E "^$delink_var" info | cut -d'=' -f2)"
     delink="${delink//\~/$HOME}"  # Замінюємо ~ на $HOME
-    printf "DELINK: $delink\n"
 
     if [[ -n "$del" && -n "$delink" && -e "$delink" && -d "$delink" ]]; then
         rm -r "$delink/$del"
