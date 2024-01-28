@@ -80,8 +80,7 @@ grep -E 'file_[0-9]+|link_[0-9]+' info | while IFS= read -r line; do
             fi
              printf "${BLUE}Скопійовано ${PURPLE}$file${NC}${BLUE} до ${YEL}$link\n"
         else
-            printf "${RED}Помилка: ${PURPLE}%s${NC}${BLUE} або ${YEL}%s  не існує${NC}\n" "$file" "$link"
-            printf "${RED}Робочий каталог ${YEL}${work_folder}${NC} ${RED}та файли не були видалені${NC}\n"
+            printf "${RED}Помилка: ${PURPLE}%s${NC}${BLUE} або ${YEL}%s  ${BLUE}не існує${NC}\n" "$file" "$link"
        fi
 # Блок видалення файлів, працюватиме, якщо це зазначено інструкціями в файлі info
    elif [[ $line == del_* ]]; then
@@ -96,12 +95,12 @@ grep -E 'file_[0-9]+|link_[0-9]+' info | while IFS= read -r line; do
 
                 if [[ -n "$del" && -n "$delink" && -e "$delink" && -d "$delink" ]]; then
                     rm -r "$delink/$del"
-                    printf "${BLUE}Файл видалено: ${YEL}$delink/$del\n"
+                    printf "${BLUE}Файл видалено: ${YEL}$delink/$del${NC}\n"
                 else
                     printf "${RED}Помилка: ${PURPLE}%s${NC}${BLUE} або ${YEL}%s  не існує${NC}\n" "$del" "$delink"
                 fi
             else
-                printf "${RED}Помилка: файл info не існує${NC}\n"
+                printf "${RED}Помилка: файл ${PURPLE}info${RED} не існує${NC}\n"
             fi
         done
     fi
