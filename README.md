@@ -38,4 +38,5 @@ firewatch => Firewatch
 aer => AER Memories of Old
 evoland_le => Evoland Legendary Edition
 hollow_khight => Hollow Knight
+bioshok_re => BioShok Remastered
 ```
