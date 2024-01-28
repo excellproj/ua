@@ -82,8 +82,30 @@ grep -E 'file_[0-9]+|link_[0-9]+' info | while IFS= read -r line; do
         else
             printf "${RED}Помилка: ${PURPLE}%s${NC}${BLUE} або ${YEL}%s  не існує${NC}\n" "$file" "$link"
             printf "${RED}Робочий каталог ${YEL}${work_folder}${NC} ${RED}та файли не були видалені${NC}\n"
+fi
+# Блок видалення файлів, працюватиме, якщо це зазначено інструкціями в файлі info
+   elif [[ $line == del_* ]]; then
+        IFS=',' read -r -a dels <<< "${line#*=}"
+        for del in "${dels[@]}"; do
+            index="${line#del_}" # Отримуємо індекс del_* (наприклад, 1 з del_1)
+            index="${index//[^0-9]/}"
+            delink_var="delink_${index}" # Отримуємо відповідний індекс delink_*
+if [[ -f "info" ]]; then # Зчитуємо значення delink_* з файлу info
+    delink="$(grep -E "^$delink_var" info | cut -d'=' -f2)"
+    delink="${delink//\~/$HOME}"  # Замінюємо ~ на $HOME
+    printf "DELINK: $delink\n"
 
-        fi
+    if [[ -n "$del" && -n "$delink" && -e "$delink" && -d "$delink" ]]; then
+        rm -r "$delink/$del"
+        printf "${BLUE}Файл видалено: ${YEL}$delink/$del\n"
+    else
+        printf "${RED}Помилка: ${PURPLE}%s${NC}${BLUE} або ${YEL}%s  не існує${NC}\n" "$del" "$delink"
+    fi
+else
+    printf "${RED}Помилка: файл info не існує${NC}\n"
+fi
+        
+        done
     fi
 done
 
