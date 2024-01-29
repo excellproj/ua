@@ -1,8 +1,8 @@
 #!/bin/bash
 
-#Скрипт встановлення української локалізації ігор на MacOS
-#v 1.0 by ExcellProj and MATRIXFELLO
-#Актуальність бази - 27.01.2024
+# Скрипт встановлення української локалізації ігор на MacOS
+# v 1.0 by ExcellProj and MATRIXFELLO
+# Актуальність бази - 29.01.2024
 
 BLUE='\033[0;36m'
 YEL='\033[0;33m'
@@ -12,10 +12,10 @@ NC='\033[0m'
 
 work_folder="$HOME/Downloads/LOC_UA240891" # Створення робочої папки до якої буде завантаженно файли і яка буде видалена після закінчення встановлення
 
-#Це щось типу доступної бази локалізацій ігор для встановлення, де:
-#gameDes - повна назва гри
-#gameIds - короткий варіант назви гри, так званий ID гри, який використовують для вибору гри при підчас встановлення
-#fileIds - посилання на завантаження файлів з Google Drive
+# Це щось типу доступної бази локалізацій ігор для встановлення, де:
+# gameDes - повна назва гри
+# gameIds - короткий варіант назви гри, так званий ID гри, який використовують для вибору гри при підчас встановлення
+# fileIds - посилання на завантаження файлів з Google Drive
 gameDes=("AER Memories of Old" "Firewatch" "Evoland Legendary Edition" "Hollow Knight" "BioShok Remastered")
 gameIds=("aer" "firewatch" "evoland_le" "hollow_knight" "bioshok_re")
 fileIds=("1-PJVIg09M8s2uXxSDZZUQYRHoG-7s_UQ" "16syl-lfrfxh2vUqOLu5Gbjj0gjCOjz9Y" "1SNLzafwJM7IS9sR_dIQL3LFLhdM3X47s" "1xEFWMe8YwzxmjXUNoKzJmlRnfvSRTW75" "1uSNraR4mEDrysgqIZx9iQp-P_2P35exg")
@@ -60,7 +60,7 @@ tar -xf "${work_folder}/localization_ua.zip" -C "${work_folder}" --strip-compone
 
 cd "${work_folder}"
 # Тут використовується файл info, де вказані інструкції, що і куди треба скопіювати
-grep -E 'file_[0-9]+|link_[0-9]+' info | while IFS= read -r line; do
+grep -E 'file_[0-9]+|link_[0-9]+|del_[0-9]+' info | while IFS= read -r line; do
     if [[ $line == file_* ]]; then
         file="${line#*=}"
     elif [[ $line == link_* ]]; then
@@ -72,11 +72,11 @@ grep -E 'file_[0-9]+|link_[0-9]+' info | while IFS= read -r line; do
         fi
 
         if [[ -n "$file" && -n "$link" && -e "$file" && -d "$link" ]]; then
-            #Перевіряємо чи надходить тека з файлами, чи імʼя файлу
+            # Перевіряємо чи надходить тека з файлами, чи імʼя файлу
             if [[  $file == */ ]]; then
-              cp -r "$file"* "$link"
+                cp -r "$file"* "$link"
             else
-              cp -r "$file" "$link"
+                cp -r "$file" "$link"
             fi
              printf "${BLUE}Скопійовано ${PURPLE}$file${NC}${BLUE} до ${YEL}$link\n"
         else
