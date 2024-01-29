@@ -7,23 +7,24 @@
   - з `Google.Drive` по цьому посиланню => https://drive.google.com/file/d/17CAbS6pqysgPqRk7JdlYXoqPDHhElU1c  
       - Запустити інсталятор `ua.sh` в консолі зручним для вас способом
 * Вписати доступний `ID гри` (доступний список по команді `list` або [тут](https://github.com/excellproj/ua/tree/main#список-ігорgames-list))
-* Дочекатися кінця встановлення та насолоджуватися грою :)  
+* Дочекатися кінця встановлення, грати :)  
+  - P.S. також може знадобитися зміна мови в налаштуваннях гри
   
 **Тестувалося на `MacOS Sonoma` `14.3` ~~14.2.1~~**  
 **Принцип роботи наступний:**  
-Скрипт завантажує з `Google.Drive` архів з файлами локалізації гри, яку обрав користувач медотов вводу `ID гри`(щоб переглянути список доступних ігор можна вписати команду `list` або переглянути список [тут](https://github.com/excellproj/ua/tree/main#список-ігорgames-list)). В архіві є файлик `info`, який містить інструкції для інсталятора, що і куди копіювати та спецільно готується.  
+Скрипт завантажує з `Google.Drive` архів з файлами локалізації гри, яку обрав користувач медотов вводу `ID гри`(щоб переглянути список доступних ігор можна вписати команду `list` або переглянути список [тут](https://github.com/excellproj/ua/tree/main#список-ігорgames-list)). В архіві є файлик `info`, який містить інструкції для інсталятора, що і куди копіювати(деякі локалізації не працюють під `MacOS`, якщо не видалити деякі файли, тому я додав таку змогу в інсталятор) та спецільно готується.  
 Приклад `info`:
 ```
 file_1=Fonts+Textures/
 link_1=~/Library/Application Support/Steam/steamapps/common/Firewatch/Firewatch.app/Contents/Resources/Data
-file_2=Audio/
-link_2=~/Library/Application Support/Steam/steamapps/common/Firewatch/Firewatch.app/Contents/Resources/Data/StreamingAssets/Audio/GeneratedSoundBanks/Windows/English(US)
-file_3=Text/
-link_3=~/Library/Application Support/CampoSanto/Firewatch/Localization
+del_1=warningpc.swf.gsc,warning.swf.gsc
+delink_1=~/Library/Application Support/Steam/steamapps/common/BioShock Remastered/BioshockHDData/contentbaked/pc/flashmovies
 ```
 де  
 `file_*` - це файли або теки з файлами, які треба скопіювати.  
 `link_*` - це кінцеві посилання на теки, куди треба скопіювати файли.  
+`del_*`  - список файлів, які треба видалити.  
+`delink` - посилання на теку/и, де треба видалити файли
 ***Зазвичай міститься уся доступна локалізація на момент додавання гри до бази(текст, звук, текстури тощо), якщо зʼявилося оновлення, то повідомте мене в _Discord:_ `matrixfello`***  
 **У майбутьньому також треба буде Ваша допомога у наповнені бази та тестувані :)**  
 ### **Важливо!**  
