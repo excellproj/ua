@@ -41,4 +41,5 @@ evoland_le => Evoland Legendary Edition
 hollow_khight => Hollow Knight
 bioshok_re => BioShok Remastered
 outlast => Outlast + DLC
+bastion => Bastion
 ```

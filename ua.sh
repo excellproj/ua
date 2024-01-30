@@ -16,13 +16,13 @@ work_folder="$HOME/Downloads/LOC_UA240891" # Створення робочої �
 # gameDes - повна назва гри
 # gameIds - короткий варіант назви гри, так званий ID гри, який використовують для вибору гри при підчас встановлення
 # fileIds - посилання на завантаження файлів з Google Drive
-gameDes=("AER Memories of Old" "Firewatch" "Evoland Legendary Edition" "Hollow Knight" "BioShok Remastered" "Outlast + DLC")
-gameIds=("aer" "firewatch" "evoland_le" "hollow_knight" "bioshok_re" "outlast")
+gameDes=("AER Memories of Old" "Firewatch" "Evoland Legendary Edition" "Hollow Knight" "BioShok Remastered" "Outlast + DLC" "Bastion")
+gameIds=("aer" "firewatch" "evoland_le" "hollow_knight" "bioshok_re" "outlast" "bastion")
 fileIds=("1-PJVIg09M8s2uXxSDZZUQYRHoG-7s_UQ" "16syl-lfrfxh2vUqOLu5Gbjj0gjCOjz9Y" "1SNLzafwJM7IS9sR_dIQL3LFLhdM3X47s" "1xEFWMe8YwzxmjXUNoKzJmlRnfvSRTW75" "1uSNraR4mEDrysgqIZx9iQp-P_2P35exg" \
-    "13tK5UNolMGVCkncJJZkuZo67W9IBlyqt")
+    "13tK5UNolMGVCkncJJZkuZo67W9IBlyqt" "1LSXp2ItAalkUGeh52FfwxIC8QdC1JWos")
 
 printf "${YEL}Вітаю! Цей скрипт допоможе встановити українську локалізацію${BLUE}\nБудь ласка упевніться, що Ви зробили перший запуск гри.\n\
-Введіть ID гри (вказано в інструкції) або list, щоб побачити список доступних ID => Назва гри: \n"
+Введіть ID гри (вказано в інструкції) або ${PURPLE}list${BLUE}, щоб побачити список доступних ID => Назва гри: \n"
 
 while true; do
     read -p "$(printf "${PURPLE}>") " gameId
