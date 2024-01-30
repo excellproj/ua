@@ -42,4 +42,5 @@ hollow_khight => Hollow Knight
 bioshok_re => BioShok Remastered
 outlast => Outlast + DLC
 bastion => Bastion
+titan_souls => Titan Souls
 ```
