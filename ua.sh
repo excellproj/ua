@@ -1,8 +1,8 @@
 #!/bin/bash
 
 # Скрипт встановлення української локалізації ігор на MacOS
-# v 1.0 by ExcellProj and MATRIXFELLO
-# Актуальність бази - 29.01.2024
+# v 1.1 by ExcellProj and MATRIXFELLO
+# Актуальність бази - 01.02.2024
 
 BLUE='\033[0;36m'
 YEL='\033[0;33m'
@@ -16,10 +16,10 @@ work_folder="$HOME/Downloads/LOC_UA240891" # Створення робочої �
 # gameDes - повна назва гри
 # gameIds - короткий варіант назви гри, так званий ID гри, який використовують для вибору гри при підчас встановлення
 # fileIds - посилання на завантаження файлів з Google Drive
-gameDes=("AER Memories of Old" "Firewatch" "Evoland Legendary Edition" "Hollow Knight" "BioShok Remastered" "Outlast + DLC" "Bastion" "Titan Souls" "SteamWorld Dig 2")
-gameIds=("aer" "firewatch" "evoland_le" "hollow_knight" "bioshok_re" "outlast" "bastion" "titan_souls" "swd2")
+gameDes=("AER Memories of Old" "Firewatch" "Evoland Legendary Edition" "Hollow Knight" "BioShok Remastered" "Outlast + DLC" "Bastion" "Titan Souls" "SteamWorld Dig 2" "This War of Mine")
+gameIds=("aer" "firewatch" "evoland_le" "hollow_knight" "bioshok_re" "outlast" "bastion" "titan_souls" "swd2" "twom")
 fileIds=("1-PJVIg09M8s2uXxSDZZUQYRHoG-7s_UQ" "16syl-lfrfxh2vUqOLu5Gbjj0gjCOjz9Y" "1SNLzafwJM7IS9sR_dIQL3LFLhdM3X47s" "1xEFWMe8YwzxmjXUNoKzJmlRnfvSRTW75" "1uSNraR4mEDrysgqIZx9iQp-P_2P35exg" \
-    "13tK5UNolMGVCkncJJZkuZo67W9IBlyqt" "1LSXp2ItAalkUGeh52FfwxIC8QdC1JWos" "14RrcyKKqFLej-oN49bmcRKFSRkGkDDQg" "12aprhDHseCHNrnWNqSW671zNjjYoLgmM")
+    "13tK5UNolMGVCkncJJZkuZo67W9IBlyqt" "1LSXp2ItAalkUGeh52FfwxIC8QdC1JWos" "14RrcyKKqFLej-oN49bmcRKFSRkGkDDQg" "12aprhDHseCHNrnWNqSW671zNjjYoLgmM" "1ItrAwYKDNbxMkpyfSKQS7a5PxeHAe0Rt")
 
 printf "${YEL}Вітаю! Цей скрипт допоможе встановити українську локалізацію${BLUE}\nБудь ласка упевніться, що Ви зробили перший запуск гри.\n\
 Введіть ID гри (вказано в інструкції) або ${PURPLE}list${BLUE}, щоб побачити список доступних ID => Назва гри: \n"

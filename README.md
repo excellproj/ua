@@ -44,4 +44,5 @@ outlast => Outlast + DLC
 bastion => Bastion
 titan_souls => Titan Souls
 swd2 => SteamWorld Dig 2
+twom => This War of Mine
 ```
