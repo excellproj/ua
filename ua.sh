@@ -1,8 +1,8 @@
 #!/bin/bash
 
 # Скрипт встановлення української локалізації ігор на MacOS
-# v 1.1 by ExcellProj and MATRIXFELLO
-# Актуальність бази - 01.02.2024
+# v 1.2 by ExcellProj and MATRIXFELLO
+# Актуальність бази - 02.02.2024
 
 BLUE='\033[0;36m'
 YEL='\033[0;33m'
@@ -16,14 +16,15 @@ work_folder="$HOME/Downloads/LOC_UA240891" # Створення робочої �
 # gameDes - повна назва гри
 # gameIds - короткий варіант назви гри, так званий ID гри, який використовують для вибору гри при підчас встановлення
 # fileIds - посилання на завантаження файлів з Google Drive
-gameDes=("AER Memories of Old" "Firewatch" "Evoland Legendary Edition" "Hollow Knight" "BioShok Remastered" "Outlast + DLC" "Bastion" "Titan Souls" "SteamWorld Dig 2" "This War of Mine" "Mount & Blade: Warband")
-gameIds=("aer" "firewatch" "evoland_le" "hollow_knight" "bioshok_re" "outlast" "bastion" "titan_souls" "swd2" "twom" "mb_warband")
+gameDes=("AER Memories of Old" "Firewatch" "Evoland Legendary Edition" "Hollow Knight" "BioShok Remastered" "Outlast + DLC" "Bastion" "Titan Souls" "SteamWorld Dig 2" "This War of Mine" "Mount & Blade: Warband" \
+    "HUE")
+gameIds=("aer" "firewatch" "evoland_le" "hollow_knight" "bioshok_re" "outlast" "bastion" "titan_souls" "swd2" "twom" "mb_warband" "hue")
 fileIds=("1-PJVIg09M8s2uXxSDZZUQYRHoG-7s_UQ" "16syl-lfrfxh2vUqOLu5Gbjj0gjCOjz9Y" "1SNLzafwJM7IS9sR_dIQL3LFLhdM3X47s" "1xEFWMe8YwzxmjXUNoKzJmlRnfvSRTW75" "1uSNraR4mEDrysgqIZx9iQp-P_2P35exg" \
     "13tK5UNolMGVCkncJJZkuZo67W9IBlyqt" "1LSXp2ItAalkUGeh52FfwxIC8QdC1JWos" "14RrcyKKqFLej-oN49bmcRKFSRkGkDDQg" "12aprhDHseCHNrnWNqSW671zNjjYoLgmM" "1ItrAwYKDNbxMkpyfSKQS7a5PxeHAe0Rt" \
-    "1sitQs37mzJZ5X4wfTr9cc7BrJswt1mzv")
+    "1sitQs37mzJZ5X4wfTr9cc7BrJswt1mzv" "15tHrX_5vHhNvn__2jW1OOGy9Qa8QiA72")
 
 printf "${YEL}Вітаю! Цей скрипт допоможе встановити українську локалізацію${BLUE}\nБудь ласка упевніться, що Ви зробили перший запуск гри.\n\
-Введіть ID гри (вказано в інструкції) або ${PURPLE}list${BLUE}, щоб побачити список доступних ID => Назва гри: \n"
+Введіть ID гри (вказано в інструкції) або ${PURPLE}list${BLUE}, щоб побачити список доступних ID => Назва гри, або ${PURPLE}exit${BLUE}, щоб закінчити: \n"
 
 while true; do
     read -p "$(printf "${PURPLE}>") " gameId

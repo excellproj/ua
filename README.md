@@ -46,4 +46,5 @@ titan_souls => Titan Souls
 swd2 => SteamWorld Dig 2
 twom => This War of Mine
 mb_warband => Mount & Blade: Warband
+hue => HUE
 ```
