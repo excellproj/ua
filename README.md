@@ -35,13 +35,13 @@ delink_1=~/Library/Application Support/Steam/steamapps/common/BioShock Remastere
 
 ### ***Список ігор/Games list***  
 ```
-firewatch => Firewatch (текст + дубляж)
+firewatch => Firewatch (текст + озвучення)
 aer => AER Memories of Old (текст)
 evoland_le => Evoland Legendary Edition (текст)
 hollow_khight => Hollow Knight (текст)
 bioshok_re => BioShok Remastered (текст)
 outlast => Outlast + DLC (текст)
-bastion => Bastion (текст + дубляж)
+bastion => Bastion (текст + озвучення)
 titan_souls => Titan Souls (текст)
 swd2 => SteamWorld Dig 2 (текст)
 twom => This War of Mine (текст)
