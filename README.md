@@ -47,4 +47,5 @@ swd2 => SteamWorld Dig 2 (текст)
 twom => This War of Mine (текст)
 mb_warband => Mount & Blade: Warband (текст)
 hue => HUE (текст)
+antichamber => Antichamber (текст)
 ```
