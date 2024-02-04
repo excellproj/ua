@@ -27,7 +27,9 @@ printf "${YEL}Вітаю! Цей скрипт допоможе встанови�
 Введіть ID гри (вказано в інструкції) або ${PURPLE}list${BLUE}, щоб побачити список доступних ID => Назва гри, або ${PURPLE}exit${BLUE}, щоб закінчити: \n"
 
 while true; do
-    read -p "$(printf "${PURPLE}>") " gameId
+    read -p "$(printf "${PURPLE}>") " gameTEXT
+
+    gameId=$(echo "$gameTEXT" | tr '[:upper:]' '[:lower:]')
 
     if [ "${gameId}" == "exit" ]; then
         printf "${BLUE}Вихід${NC}\n"
