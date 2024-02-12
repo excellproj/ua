@@ -48,4 +48,5 @@ twom => This War of Mine (текст)
 mb_warband => Mount & Blade: Warband (текст)
 hue => HUE (текст)
 antichamber => Antichamber (текст)
+blasphemous => Blasphemous (текст)
 ```
