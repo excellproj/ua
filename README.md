@@ -49,4 +49,5 @@ mb_warband => Mount & Blade: Warband (текст)
 hue => HUE (текст)
 antichamber => Antichamber (текст)
 blasphemous => Blasphemous (текст)
+stray => Stray (текст | В налаштуваннях гри треба змінити мову на English)
 ```
