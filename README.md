@@ -50,6 +50,6 @@ hue => HUE (текст)
 antichamber => Antichamber (текст)
 blasphemous => Blasphemous (текст)
 stray => Stray (текст | В налаштуваннях гри треба змінити мову на English)
-everspace => EVERSPACE™ (текст | В налаштуваннях гри треба змінити мову на France(французьку))
+everspace => EVERSPACE™ (текст | В налаштуваннях гри треба змінити мову на France(французьку) )
 
 ```
